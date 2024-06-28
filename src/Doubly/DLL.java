@@ -41,7 +41,6 @@ public class DLL<Dll> {
             while (curr.next!=null){
                 if(curr.next.val==temp.val){
                     curr.next=curr.next.next;
-
                 }else{
                     curr=curr.next;
                 }
@@ -191,6 +190,26 @@ public class DLL<Dll> {
                 node.previous = pretemp;
                 node.next = temp;
                 temp.previous = node;
+            }
+        }
+    }
+
+    public void removeDuplicates() {
+        if (head == null) {
+            return;
+        }
+
+        Node current = head;
+
+        while (current != null && current.next != null) {
+            if (current.val == current.next.val) {
+                // Remove the current.next node
+                current.next = current.next.next;
+                if (current.next != null) {
+                    current.next.previous = current;
+                }
+            } else {
+                current = current.next;
             }
         }
     }

@@ -3,7 +3,8 @@ public class Insert_delete {
       LL l=new LL();
       l.insertlast(2);
       l.insertlast(4);
-      l.insertlast(3);
+      l.insertlast(4);
+      l.insertlast(5);
 //      l.insertlast(0);
 //      l.insertlast(4);
 //      l.insertlast(5);
@@ -12,23 +13,25 @@ public class Insert_delete {
 
       LL l2=new LL();
       l2.insertlast(5);
-      l2.insertlast(6);
-      l2.insertlast(4);
+//      l2.insertlast(6);
+//      l2.insertlast(4);
 
       l.display();
-      l2.display();
+      l.removeduplicateFromSorted();
+      l.display();
+//      l2.display();
 
-      Node h1=new Node();
-
-      while (l!=null && l2!=null){
-        if(h1==null){
-          h1.val=l.head.val+l2.head.val;
-          l.head=l.head.next;
-          l2.head=l2.head.next;
-        }else {
-          
-        }
-      }
+//      Node h1=new Node();
+//
+//      while (l!=null && l2!=null){
+//        if(h1==null){
+//          h1.val=l.head.val+l2.head.val;
+//          l.head=l.head.next;
+//          l2.head=l2.head.next;
+//        }else {
+//
+//        }
+//      }
       //      l.mergeNodes(l);
 
 

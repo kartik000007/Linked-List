@@ -24,10 +24,8 @@ public class SLL {
         if(head==null){
             head=node;
             head.next=head;
-
         }else {
             Node curr=head;
-
             while (curr.next!=head){
                 curr=curr.next;
             }
@@ -73,7 +71,6 @@ public class SLL {
             System.out.println("empty");
             return;
         }
-
         if (head.value == value && head.next == head) {
             head = null;
         } else if (head.value == value) {

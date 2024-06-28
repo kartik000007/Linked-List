@@ -28,11 +28,22 @@ public class LL {
     return ll;
     }
 
-    public void removeduplicateFromSorted(LL ll){
+    public void removeduplicateFromSorted(){
         Node temp=head;
+//        while (temp.next!=null){
+//            if(temp.val==temp.next.val){
+//                temp.next=temp.next.next;
+//            }else{
+//                temp=temp.next;
+//            }
+//        }
         while (temp.next!=null){
-            if(temp.val==temp.next.val){
-                temp.next=temp.next.next;
+            Node curr=temp.next;
+            if(temp.val==curr.val){
+                if(curr.next!=null){
+                    temp.next=curr.next;
+                }
+                curr.next=null;
             }else{
                 temp=temp.next;
             }
